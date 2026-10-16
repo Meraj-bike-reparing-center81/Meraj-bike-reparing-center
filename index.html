@@ -4,164 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meraj Bike Repairing Centre</title>
+    <!-- गूगल फॉन्ट (Professional Font) जोड़ने के लिए -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         body {
             background-color: #f4f7f6;
             color: #333;
         }
-        /* आकर्षक हेडर विथ बैकग्राउंड इमेज एंड डार्क ओवरले */
+        /* अत्यधिक आकर्षक और प्रोफेशनल हेडर डिज़ाइन */
         header {
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
+            border-bottom: 5px solid #ffcc00;
+        }
+        header .logo-badge {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #111;
+            padding: 5px 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
         }
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 12px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ffcc00;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+        header h1 span {
+            color: #ffcc00; /* 'Repairing Centre' हिस्से को सुनहरा रंग देने के लिए */
         }
         header p {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #e0e0e0;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #f1f1f1;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
         .container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 25px auto;
             padding: 0 15px;
         }
         .card {
             background: white;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 20px;
         }
         .card h2 {
-            color: #2c3e50;
+            color: #1a252f;
             margin-bottom: 15px;
             font-size: 1.4rem;
             border-bottom: 2px solid #ffcc00;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            font-weight: 700;
         }
         ul {
             list-style-type: none;
         }
         ul li {
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 1.05rem;
             border-bottom: 1px dashed #eee;
+            color: #444;
         }
         ul li:last-child {
             border-bottom: none;
         }
         /* अपॉइंटमेंट फॉर्म डिज़ाइन */
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-weight: 600;
-            color: #555;
+            color: #333;
+            font-size: 0.95rem;
         }
-        .form-group input, .form-group select {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 12px;
+            border: 1px solid #ccd1d1;
+            border-radius: 6px;
             font-size: 1rem;
+            background-color: #fafafa;
+            transition: border 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #ffcc00;
+            outline: none;
+            background-color: #fff;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 90px;
         }
         .btn-submit {
             background-color: #27ae60;
             color: white;
             border: none;
-            padding: 12px;
+            padding: 14px;
             width: 100%;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 5px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-radius: 6px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
         }
         .btn-submit:hover {
             background-color: #219653;
+            transform: translateY(-1px);
         }
         footer {
             text-align: center;
-            background-color: #222;
+            background-color: #1a252f;
             color: white;
-            padding: 15px;
-            font-size: 0.9rem;
-            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.95rem;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Meraj Bike Repairing Centre</h1>
-        <p>आपकी बाइक के लिए भरोसेमंद और बेहतरीन सर्विस</p>
+        <div class="logo-badge">Professional Two-Wheeler Workshop</div>
+        <h1>Meraj <span>Bike Repairing Centre</span></h1>
+        <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
     </header>
 
     <div class="container">
         <!-- सेवाएँ और संपर्क कार्ड -->
         <div class="card">
-            <h2>हमारी सेवाएँ (Services):</h2>
+            <h2>हमारी मुख्य सेवाएँ (Services):</h2>
             <ul>
                 <li>🔧 बाइक जनरल सर्विसिंग (General Servicing)</li>
-                <li>⚙️ इंजन रिपेयरिंग (Engine Repair)</li>
-                <li>🛢️ ऑयल चेंज (Oil Change)</li>
-                <li>🛞 पैंचर और टायर रिपेयर</li>
+                <li>⚙️ इंजन रिपेयरिंग और ट्यूनिंग (Engine Repair)</li>
+                <li>🛢️ प्रीमियम ऑयल चेंज (Oil Change)</li>
+                <li>🛞 पैंचर और ट्यूबलेस टायर रिपेयर</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>संपर्क करें (Contact):</h2>
-            <p><strong>पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
-            <p><strong>मोबाइल नंबर:</strong> 8130585587</p>
+            <h2>दुकान का पता और संपर्क:</h2>
+            <p style="margin-bottom: 8px;"><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
+            <p><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
         </div>
 
         <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
         <div class="card">
-            <h2>बाइक सर्विसिंग अपॉइंटमेंट बुक करें</h2>
+            <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
             <form onsubmit="bookAppointment(event)">
                 <div class="form-group">
-                    <label for="name">आपका नाम:</label>
-                    <input type="text" id="name" required placeholder="अपना नाम दर्ज करें">
+                    <label for="name">पूरा नाम (Full Name): <span style="color:red;">*</span></label>
+                    <input type="text" id="name" required placeholder="अपना पूरा नाम दर्ज करें">
                 </div>
+                
                 <div class="form-group">
-                    <label for="phone">मोबाइल नंबर:</label>
-                    <input type="tel" id="phone" required placeholder="10 अंकों का मोबाइल नंबर">
+                    <label for="phone">मोबाइल नंबर (Mobile Number): <span style="color:red;">*</span></label>
+                    <input type="tel" id="phone" required pattern="[0-9]{10}" title="कृपया 10 अंकों का सही मोबाइल नंबर दर्ज करें" placeholder="10 अंकों का मोबाइल नंबर (जैसे: 9876543210)">
                 </div>
+
                 <div class="form-group">
-                    <label for="bike">बाइक का नाम/मॉडल:</label>
-                    <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar">
+                    <label for="bike">बाइक का प्रकार / मॉडल (Bike Model): <span style="color:red;">*</span></label>
+                    <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar, Apache">
                 </div>
+
                 <div class="form-group">
-                    <label for="service">किस प्रकार की सर्विस चाहिए:</label>
+                    <label for="problem">बाइक में क्या समस्या है? (Problem Description): <span style="color:red;">*</span></label>
+                    <textarea id="problem" required placeholder="अपनी बाइक की समस्या या सर्विस के बारे में विस्तार से लिखें..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">सर्विस का प्रकार चुनें:</label>
                     <select id="service">
                         <option value="General Servicing">जनरल सर्विसिंग</option>
                         <option value="Engine Repair">इंजन रिपेयरिंग</option>
                         <option value="Oil Change">ऑयल चेंज</option>
                         <option value="Puncture/Tyre">पैंचर और टायर</option>
+                        <option value="Other Problem">अन्य समस्या</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-submit">अपॉइंटमेंट बुक करें</button>
+
+                <button type="submit" class="btn-submit">व्हाट्सएप पर बुकिंग भेजें</button>
             </form>
         </div>
     </div>
@@ -173,13 +220,20 @@
     <script>
         function bookAppointment(event) {
             event.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const bike = document.getElementById('bike').value;
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const bike = document.getElementById('bike').value.trim();
+            const problem = document.getElementById('problem').value.trim();
             const service = document.getElementById('service').value;
 
-            // व्हाट्सएप पर सीधे बुकिंग भेजने की सुविधा (WhatsApp Integration)
-            const message = `Hello, I want to book an appointment.%0AName: ${name}%0APhone: ${phone}%0ABike: ${bike}%0AService: ${service}`;
+            if(!name || !phone || !bike || !problem) {
+                alert('कृपया सभी अनिवार्य जानकारी भरें!');
+                return;
+            }
+
+            // व्हाट्सएप पर मैसेज भेजने का कोड
+            const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
             window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
         }
     </script>
