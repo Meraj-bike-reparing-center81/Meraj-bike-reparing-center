@@ -357,10 +357,13 @@
             margin-top: 20px;
         }
         .scanner-box img {
-            max-width: 180px;
-            height: auto;
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
             border-radius: 8px;
             margin-top: 10px;
+            background: white;
+            padding: 8px;
             border: 2px solid #ddd;
         }
 
@@ -553,34 +556,34 @@
                 </div>
             </div>
 
-            <!-- डिजिटल उधारी और खाता बुक -->
+            <!-- डिजिटल उधारी और खाता बुक (फिक्स किया हुआ) -->
             <div class="card full-width" id="digitalKhata">
                 <h2>📒 डिजिटल उधारी और खाता बुक (Real Khata System)</h2>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">यहाँ ग्राहक की उधारी जोड़ें। यह आपके ब्राउज़र में हमेशा सेव रहेगा और व्हाट्सएप पर सीधे रिमाइंडर भेज सकते हैं:</p>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">यहाँ ग्राहक की उधारी जोड़ें। यह तुरंत सेव होगी और व्हाट्सएप पर रिमाइंडर भेज सकते हैं:</p>
                 
-                <form onsubmit="addKhataEntry(event)">
+                <div>
                     <div class="form-group">
                         <label for="kName">ग्राहक का नाम (Customer Name): <span style="color:red;">*</span></label>
-                        <input type="text" id="kName" required placeholder="जैसे: राहुल कुमार">
+                        <input type="text" id="kName" placeholder="जैसे: राहुल कुमार">
                     </div>
                     
                     <div class="form-group">
                         <label for="kPhone">मोबाइल / व्हाट्सएप नंबर (10 अंक): <span style="color:red;">*</span></label>
-                        <input type="tel" id="kPhone" required pattern="[0-9]{10}" placeholder="जैसे: 9876543210">
+                        <input type="tel" id="kPhone" maxlength="10" placeholder="जैसे: 9876543210">
                     </div>
 
                     <div class="form-group">
                         <label for="kWork">उधारी का कारण / पार्ट्स विवरण: <span style="color:red;">*</span></label>
-                        <textarea id="kWork" required placeholder="जैसे: इंजन ऑयल और क्लच प्लेट का बकाया..."></textarea>
+                        <textarea id="kWork" placeholder="जैसे: इंजन ऑयल और क्लच प्लेट का बकाया..."></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="kAmount">बाकी राशि (Amount in ₹): <span style="color:red;">*</span></label>
-                        <input type="number" id="kAmount" required placeholder="रुपये दर्ज करें (जैसे: 450)">
+                        <input type="number" id="kAmount" placeholder="रुपये दर्ज करें (जैसे: 450)">
                     </div>
 
-                    <button type="submit" class="btn-submit btn-khata">खाते में उधारी जोड़ें</button>
-                </form>
+                    <button type="button" onclick="addNewKhata()" class="btn-submit btn-khata">खाते में उधारी जोड़ें</button>
+                </div>
 
                 <div style="margin-top: 25px;">
                     <div class="khata-summary">
@@ -607,9 +610,9 @@
                 </div>
             </div>
 
-            <!-- [नया] पेमेंट स्कैनर और QR कोड सेक्शन -->
+            <!-- पेमेंट स्कैनर और QR कोड सेक्शन (पक्का काम करने वाला) -->
             <div class="card" id="scanner">
                 <h2>💳 ऑनलाइन पेमेंट स्कैनर (QR Code)</h2>
                 <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">ग्राहक इस स्कैनर को स्कैन करके सीधे ऑनलाइन भुगतान कर सकते हैं:</p>
                 <div class="scanner-box">
-                    <p style="font-weight: 700; color: #d35400; margin-bottom: 5px;">Meraj Bik
+                    <p style="font-weight: 700; c
