@@ -53,7 +53,7 @@
             color: #ffcc00;
         }
 
-        /* प्रोफेशनल हेडर और असली लोगो */
+        /* प्रोफेशनल हेडर और प्रीमियम बिल्ट-इन लोगो */
         header {
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
@@ -65,16 +65,31 @@
             border-bottom: 5px solid #ffcc00;
         }
         
-        /* असली लोगो इमेज स्टाइल */
-        .header-logo-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
+        /* शानदार कस्टम गोल्डन लोगो डिज़ाइन (बिना फोटो अपलोड किए) */
+        .custom-luxury-logo {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, #222, #000);
             border: 4px solid #ffcc00;
-            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
-            margin-bottom: 12px;
-            background-color: #111;
+            border-radius: 50%;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+        .custom-luxury-logo .logo-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+        .custom-luxury-logo .logo-text {
+            font-size: 0.85rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-top: 2px;
         }
 
         header h1 {
@@ -342,10 +357,13 @@
         </ul>
     </nav>
 
-    <!-- हेडर विथ ओरिजिनल लोगो इमेज -->
+    <!-- हेडर विथ प्रीमियम बिल्ट-इन लोगो -->
     <header>
-        <!-- यहाँ आपकी भेजी गई असली लोगो इमेज (logo.png) लगाई गई है -->
-        <img src="logo.png" alt="Meraj Bike Repairing Centre Logo" class="header-logo-img">
+        <!-- शानदार कस्टम लोगो -->
+        <div class="custom-luxury-logo">
+            <span class="logo-icon">🏍️</span>
+            <span class="logo-text">MERAJ</span>
+        </div>
         <h1>Meraj <span>Bike Repairing Centre</span></h1>
         <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
     </header>
@@ -360,11 +378,11 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <h3>9.6M+</h3>
-                        <p>Total Views[span_3](start_span)[span_3](end_span)</p>
+                        <p>Total Views</p>
                     </div>
                     <div class="stat-box">
                         <h3>5.6M+</h3>
-                        <p>Unique Viewers[span_4](start_span)[span_4](end_span)</p>
+                        <p>Unique Viewers</p>
                     </div>
                     <div class="stat-box">
                         <h3>19K+</h3>
@@ -400,99 +418,5 @@
 
                 <p style="font-weight: 600; margin: 15px 0 8px 0;">हमारे सोशल मीडिया पेज:</p>
                 <div class="social-links">
-                    <a href="https://maps.app.goo.gl/dyLNiPvRPcDRV9hM8?g_st=ac" target="_blank" class="social-btn maps-btn">📍 Google Maps</a>
-                    <a href="https://www.facebook.com/share/1CjUFWEDYs/" target="_blank" class="social-btn fb-btn">📘 Facebook</a>
-                    <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="social-btn insta-btn">📸 Instagram</a>
-                </div>
-            </div>
-
-            <!-- ग्राहक समीक्षा (Testimonials) -->
-            <div class="card full-width">
-                <h2>⭐ ग्राहक समीक्षा (Customer Reviews)</h2>
-                <div class="reviews-container">
-                    <div class="review-card">
-                        <h4>राहुल कुमार</h4>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"बहुत ही बेहतरीन सर्विस है भाई की! इंजन का काम करवाया था, गाड़ी बिल्कुल मक्खन चल रही है।"</p>
-                    </div>
-                    <div class="review-card">
-                        <h4>अमित झा</h4>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"सरायरंजन रोड पर सबसे बेहतरीन बाइक रिपेयरिंग सेंटर। काम में पूरी ईमानदारी मिलती है।"</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
-            <div class="card full-width" id="booking">
-                <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
-                <form onsubmit="bookAppointment(event)">
-                    <div class="form-group">
-                        <label for="name">पूरा नाम (Full Name): <span style="color:red;">*</span></label>
-                        <input type="text" id="name" required placeholder="अपना पूरा नाम दर्ज करें">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">मोबाइल नंबर (Mobile Number): <span style="color:red;">*</span></label>
-                        <input type="tel" id="phone" required pattern="[0-9]{10}" title="कृपया 10 अंकों का सही मोबाइल नंबर दर्ज करें" placeholder="10 अंकों का मोबाइल नंबर (जैसे: 9876543210)">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="bike">बाइक का प्रकार / मॉडल (Bike Model): <span style="color:red;">*</span></label>
-                        <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar, Apache">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="problem">बाइक में क्या समस्या है? (Problem Description): <span style="color:red;">*</span></label>
-                        <textarea id="problem" required placeholder="अपनी बाइक की समस्या या सर्विस के बारे में विस्तार से लिखें..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">सर्विस का प्रकार चुनें:</label>
-                        <select id="service">
-                            <option value="General Servicing">जनरल सर्विसिंग</option>
-                            <option value="Engine Repair">इंजन रिपेयरिंग</option>
-                            <option value="Oil Change">ऑयल चेंज</option>
-                            <option value="Puncture/Tyre">पैंचर और टायर</option>
-                            <option value="Other Problem">अन्य समस्या</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn-submit">व्हाट्सएप पर बुकिंग भेजें</button>
-                </form>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- हमेशा तैरता हुआ व्हाट्सएप चैट बटन -->
-    <a href="https://wa.me/918130585587" target="_blank" class="floating-whatsapp" title="WhatsApp Chat">💬</a>
-
-    <footer>
-        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function bookAppointment(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const bike = document.getElementById('bike').value.trim();
-            const problem = document.getElementById('problem').value.trim();
-            const service = document.getElementById('service').value;
-
-            if(!name || !phone || !bike || !problem) {
-                alert('कृपया सभी अनिवार्य जानकारी भरें!');
-                return;
-            }
-
-            alert('आपका अपॉइंटमेंट फॉर्म भर गया है! अब व्हाट्सएप पर भेजा जा रहा है।');
-
-            const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
-            window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
-        }
-    </script>
-
-</body>
-</html>
+                    <a href="
+                        
