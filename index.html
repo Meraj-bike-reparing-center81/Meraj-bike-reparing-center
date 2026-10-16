@@ -347,6 +347,23 @@
             background-color: #d35400;
         }
 
+        /* पेमेंट स्कैनर बॉक्स */
+        .scanner-box {
+            background: #fff8e1;
+            border: 2px dashed #f39c12;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .scanner-box img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 2px solid #ddd;
+        }
+
         /* डिजिटल खाता लिस्ट टेबल */
         .khata-summary {
             background: #fff3cd;
@@ -458,8 +475,8 @@
         <ul>
             <li><a href="#">होम</a></li>
             <li><a href="#services">सेवाएँ</a></li>
-            <li><a href="#pricing">रेट कार्ड</a></li>
             <li><a href="#digitalKhata">डिजिटल खाता</a></li>
+            <li><a href="#scanner">स्कैनर</a></li>
             <li><a href="#booking">अपॉइंटमेंट</a></li>
         </ul>
     </nav>
@@ -521,11 +538,11 @@
             <!-- संपर्क और समय -->
             <div class="card" id="contact">
                 <h2>दुकान का पता और समय:</h2>
-                <p style="margin-bottom: 8px;"><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
-                <p style="margin-bottom: 10px;"><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
+                <p style="margin-bottom: 8px;"><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान[span_0](start_span)[span_0](end_span)</p>
+                <p style="margin-bottom: 10px;"><strong>📞 मोबाइल नंबर:</strong> 8130585587[span_1](start_span)[span_1](end_span)</p>
                 
                 <div class="timing-box">
-                    <p><strong>⏰ दुकान खुलने का समय:</strong> सोमवार से रविवार (सुबह 8:00 बजे से रात 8:00 बजे तक)</p>
+                    <p><strong>⏰ दुकान खुलने का समय:</strong> सोमवार से रविवार (सुबह 8:00 बजे से रात 8:00 बजे तक)[span_2](start_span)[span_2](end_span)</p>
                 </div>
 
                 <p style="font-weight: 600; margin: 15px 0 8px 0;">हमारे सोशल मीडिया पेज:</p>
@@ -536,10 +553,10 @@
                 </div>
             </div>
 
-            <!-- [रियल वर्किंग] डिजिटल खाता और उधारी मैनेजर सेक्शन -->
+            <!-- डिजिटल उधारी और खाता बुक -->
             <div class="card full-width" id="digitalKhata">
                 <h2>📒 डिजिटल उधारी और खाता बुक (Real Khata System)</h2>
-                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">यहाँ ग्राहक की उधारी जोड़ें। यह आपके ब्राउज़र में हमेशा सेव रहेगा और व्हाट्सएप पर रिमाइंडर भेज सकते हैं:</p>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">यहाँ ग्राहक की उधारी जोड़ें। यह आपके ब्राउज़र में हमेशा सेव रहेगा और व्हाट्सएप पर सीधे रिमाइंडर भेज सकते हैं:</p>
                 
                 <form onsubmit="addKhataEntry(event)">
                     <div class="form-group">
@@ -590,31 +607,9 @@
                 </div>
             </div>
 
-            <!-- रेट कार्ड -->
-            <div class="card" id="pricing">
-                <h2>🛠️ सर्विस रेट कार्ड (Estimated Price)</h2>
-                <table class="price-table">
-                    <tr>
-                        <th>सर्विस का नाम</th>
-                        <th>अनुमानित शुल्क</th>
-                    </tr>
-                    <tr>
-                        <td>जनरल सर्विसिंग</td>
-                        <td>₹150 - ₹250</td>
-                    </tr>
-                    <tr>
-                        <td>इंजन ऑयल चेंज</td>
-                        <td>ऑयल मूल्य + नॉमिनल चार्ज</td>
-                    </tr>
-                    <tr>
-                        <td>इंजन रिपेयर / ट्यूनिंग</td>
-                        <td>काम के अनुसार</td>
-                    </tr>
-                    <tr>
-                        <td>पंचर और ट्यूबलेस रिपेयर</td>
-                        <td>₹40 - ₹80</td>
-                    </tr>
-                </table>
-            </div>
-
-          
+            <!-- [नया] पेमेंट स्कैनर और QR कोड सेक्शन -->
+            <div class="card" id="scanner">
+                <h2>💳 ऑनलाइन पेमेंट स्कैनर (QR Code)</h2>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">ग्राहक इस स्कैनर को स्कैन करके सीधे ऑनलाइन भुगतान कर सकते हैं:</p>
+                <div class="scanner-box">
+                    <p style="font-weight: 700; color: #d35400; margin-bottom: 5px;">Meraj Bik
