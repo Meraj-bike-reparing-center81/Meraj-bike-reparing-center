@@ -3,66 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meraj Bike Reparing Centre</title>
+    <title>Meraj Bike Repairing Centre</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        /* आकर्षक हेडर विथ बैकग्राउंड इमेज एंड डार्क ओवरले */
         header {
-            background-color: #d32f2f;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 20px 10px;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffcc00;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        header p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #e0e0e0;
         }
         .container {
-            padding: 20px;
-        }
-        .services {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
             max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: left;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            padding: 8px 0;
+            font-size: 1.05rem;
+            border-bottom: 1px dashed #eee;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+        /* अपॉइंटमेंट फॉर्म डिज़ाइन */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .btn-submit {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #219653;
         }
         footer {
+            text-align: center;
             background-color: #222;
             color: white;
-            padding: 10px;
-            margin-top: 40px;
+            padding: 15px;
+            font-size: 0.9rem;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Meraj Bike Reparing Centre</h1>
+        <h1>Meraj Bike Repairing Centre</h1>
         <p>आपकी बाइक के लिए भरोसेमंद और बेहतरीन सर्विस</p>
     </header>
 
     <div class="container">
-        <div class="services">
+        <!-- सेवाएँ और संपर्क कार्ड -->
+        <div class="card">
             <h2>हमारी सेवाएँ (Services):</h2>
             <ul>
-                <li>बाइक जनरल सर्विसिंग (General Servicing)</li>
-                <li>इंजन रिपेयरिंग (Engine Repair)</li>
-                <li>ऑयल चेंज (Oil Change)</li>
-                <li>पेंचर और टायर रिपेयर</li>
+                <li>🔧 बाइक जनरल सर्विसिंग (General Servicing)</li>
+                <li>⚙️ इंजन रिपेयरिंग (Engine Repair)</li>
+                <li>🛢️ ऑयल चेंज (Oil Change)</li>
+                <li>🛞 पैंचर और टायर रिपेयर</li>
             </ul>
+        </div>
+
+        <div class="card">
             <h2>संपर्क करें (Contact):</h2>
             <p><strong>पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
             <p><strong>मोबाइल नंबर:</strong> 8130585587</p>
         </div>
+
+        <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
+        <div class="card">
+            <h2>बाइक सर्विसिंग अपॉइंटमेंट बुक करें</h2>
+            <form onsubmit="bookAppointment(event)">
+                <div class="form-group">
+                    <label for="name">आपका नाम:</label>
+                    <input type="text" id="name" required placeholder="अपना नाम दर्ज करें">
+                </div>
+                <div class="form-group">
+                    <label for="phone">मोबाइल नंबर:</label>
+                    <input type="tel" id="phone" required placeholder="10 अंकों का मोबाइल नंबर">
+                </div>
+                <div class="form-group">
+                    <label for="bike">बाइक का नाम/मॉडल:</label>
+                    <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar">
+                </div>
+                <div class="form-group">
+                    <label for="service">किस प्रकार की सर्विस चाहिए:</label>
+                    <select id="service">
+                        <option value="General Servicing">जनरल सर्विसिंग</option>
+                        <option value="Engine Repair">इंजन रिपेयरिंग</option>
+                        <option value="Oil Change">ऑयल चेंज</option>
+                        <option value="Puncture/Tyre">पैंचर और टायर</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">अपॉइंटमेंट बुक करें</button>
+            </form>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Meraj Bike Reparing Centre. All Rights Reserved.</p>
+        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function bookAppointment(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const bike = document.getElementById('bike').value;
+            const service = document.getElementById('service').value;
+
+            // व्हाट्सएप पर सीधे बुकिंग भेजने की सुविधा (WhatsApp Integration)
+            const message = `Hello, I want to book an appointment.%0AName: ${name}%0APhone: ${phone}%0ABike: ${bike}%0AService: ${service}`;
+            window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
+        }
+    </script>
 
 </body>
 </html>
