@@ -53,7 +53,7 @@
             color: #ffcc00;
         }
 
-        /* प्रोफेशनल हेडर और आपका असली लोगो डिज़ाइन */
+        /* प्रोफेशनल हेडर और असली लोगो */
         header {
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
@@ -65,22 +65,22 @@
             border-bottom: 5px solid #ffcc00;
         }
         
-        /* आपकी भेजी गई असली लोगो इमेज के लिए स्टाइल */
+        /* असली लोगो इमेज स्टाइल */
         .header-logo-img {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid #ffcc00;
-            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
-            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
+            margin-bottom: 12px;
             background-color: #111;
         }
 
         header h1 {
             font-size: 2.5rem;
             font-weight: 900;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #ffffff;
@@ -96,7 +96,7 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
-        /* लेआउट: कंप्यूटर के लिए ग्रिड सिस्टम */
+        /* लेआउट: कंप्यूटर और लैपटॉप के लिए ग्रिड सिस्टम */
         .container {
             max-width: 1100px;
             margin: 30px auto;
@@ -332,7 +332,7 @@
 
     <!-- टॉप नेविगेशन बार -->
     <nav>
-        <div class="nav-brand">⚙️ MBR Centre</div>
+        <div class="nav-brand">⚙️ Meraj Bike Centre</div>
         <ul>
             <li><a href="#">होम</a></li>
             <li><a href="#services">सेवाएँ</a></li>
@@ -342,10 +342,10 @@
         </ul>
     </nav>
 
-    <!-- हेडर विथ योर ओरिजिनल लोगो -->
+    <!-- हेडर विथ ओरिजिनल लोगो इमेज -->
     <header>
-        <!-- यहाँ आपकी भेजी हुई असली लोगो इमेज लगाई गई है -->
-        <img src="1000068940.png" alt="Meraj Bike Repairing Centre Logo" class="header-logo-img">
+        <!-- यहाँ आपकी भेजी गई असली लोगो इमेज (logo.png) लगाई गई है -->
+        <img src="logo.png" alt="Meraj Bike Repairing Centre Logo" class="header-logo-img">
         <h1>Meraj <span>Bike Repairing Centre</span></h1>
         <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
     </header>
@@ -360,11 +360,11 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <h3>9.6M+</h3>
-                        <p>Total Views[span_1](start_span)[span_1](end_span)</p>
+                        <p>Total Views[span_3](start_span)[span_3](end_span)</p>
                     </div>
                     <div class="stat-box">
                         <h3>5.6M+</h3>
-                        <p>Unique Viewers[span_2](start_span)[span_2](end_span)</p>
+                        <p>Unique Viewers[span_4](start_span)[span_4](end_span)</p>
                     </div>
                     <div class="stat-box">
                         <h3>19K+</h3>
@@ -486,6 +486,8 @@
                 alert('कृपया सभी अनिवार्य जानकारी भरें!');
                 return;
             }
+
+            alert('आपका अपॉइंटमेंट फॉर्म भर गया है! अब व्हाट्सएप पर भेजा जा रहा है।');
 
             const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
             window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
