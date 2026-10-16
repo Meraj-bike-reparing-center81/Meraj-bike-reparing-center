@@ -19,7 +19,7 @@
             color: #333;
         }
 
-        /* टॉप नेविगेशन बार (लैपटॉप और मोबाइल दोनों के लिए) */
+        /* टॉप नेविगेशन बार */
         nav {
             background-color: #1a252f;
             color: white;
@@ -53,34 +53,32 @@
             color: #ffcc00;
         }
 
-        /* प्रोफेशनल हेडर डिज़ाइन */
+        /* प्रोफेशनल हेडर और आपका असली लोगो डिज़ाइन */
         header {
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 50px 20px;
             border-bottom: 5px solid #ffcc00;
         }
-        .brand-logo {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #ffcc00;
-            color: #111;
-            width: 80px;
-            height: 80px;
+        
+        /* आपकी भेजी गई असली लोगो इमेज के लिए स्टाइल */
+        .header-logo-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
             border-radius: 50%;
-            font-size: 2.2rem;
-            font-weight: 900;
+            border: 4px solid #ffcc00;
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
             margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
-            border: 3px solid #fff;
+            background-color: #111;
         }
+
         header h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 8px;
             text-transform: uppercase;
@@ -92,7 +90,7 @@
             color: #ffcc00;
         }
         header p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 400;
             color: #f1f1f1;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
@@ -278,7 +276,7 @@
             transform: translateY(-1px);
         }
 
-        /* फ्लोटिंग व्हाट्सएप चैट बटन (स्क्रीन पर हमेशा तैरता रहेगा) */
+        /* फ्लोटिंग व्हाट्सएप चैट बटन */
         .floating-whatsapp {
             position: fixed;
             bottom: 25px;
@@ -310,7 +308,7 @@
             margin-top: 40px;
         }
 
-        /* मोबाइल स्क्रीन के लिए ऑटोमैटिक सिंगल कॉलम लेआउट */
+        /* मोबाइल स्क्रीन के लिए रिस्पॉन्सिव */
         @media (max-width: 768px) {
             .grid-layout {
                 grid-template-columns: 1fr;
@@ -325,7 +323,7 @@
                 grid-template-columns: 1fr;
             }
             nav ul {
-                display: none; /* मोबाइल पर मेनू छिपा रहेगा, होमपेज क्लीन दिखेगा */
+                display: none;
             }
         }
     </style>
@@ -339,5 +337,160 @@
             <li><a href="#">होम</a></li>
             <li><a href="#services">सेवाएँ</a></li>
             <li><a href="#stats">पॉपुलैरिटी</a></li>
-            <li><a href
+            <li><a href="#contact">संपर्क</a></li>
+            <li><a href="#booking">अपॉइंटमेंट</a></li>
+        </ul>
+    </nav>
+
+    <!-- हेडर विथ योर ओरिजिनल लोगो -->
+    <header>
+        <!-- यहाँ आपकी भेजी हुई असली लोगो इमेज लगाई गई है -->
+        <img src="1000068940.png" alt="Meraj Bike Repairing Centre Logo" class="header-logo-img">
+        <h1>Meraj <span>Bike Repairing Centre</span></h1>
+        <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
+    </header>
+
+    <div class="container">
+        <div class="grid-layout">
+
+            <!-- इंस्टाग्राम पॉपुलरिटी / इनसाइट्स कार्ड -->
+            <div class="card full-width" id="stats">
+                <h2>📸 सोशल मीडिया पॉपुलैरिटी (Instagram Insights)</h2>
+                <p style="font-size: 0.95rem; color: #555; margin-bottom: 10px;">हमारी रिपेयरिंग टिप्स और ट्रिक्स को लाखों लोग पसंद करते हैं:</p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>9.6M+</h3>
+                        <p>Total Views[span_1](start_span)[span_1](end_span)</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>5.6M+</h3>
+                        <p>Unique Viewers[span_2](start_span)[span_2](end_span)</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>19K+</h3>
+                        <p>Likes & Engagement</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>2.4K+</h3>
+                        <p>New Followers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- सेवाएँ कार्ड -->
+            <div class="card" id="services">
+                <h2>हमारी मुख्य सेवाएँ (Services):</h2>
+                <ul>
+                    <li>🔧 बाइक जनरल सर्विसिंग (General Servicing)</li>
+                    <li>⚙️ इंजन रिपेयरिंग और ट्यूनिंग (Engine Repair)</li>
+                    <li>🛢️ प्रीमियम ऑयल चेंज (Oil Change)</li>
+                    <li>🛞 पैंचर और ट्यूबलेस टायर रिपेयर</li>
+                </ul>
+            </div>
+
+            <!-- संपर्क, पता और वर्किंग ऑवर्स -->
+            <div class="card" id="contact">
+                <h2>दुकान का पता और समय:</h2>
+                <p style="margin-bottom: 8px;"><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
+                <p style="margin-bottom: 10px;"><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
+                
+                <div class="timing-box">
+                    <p><strong>⏰ दुकान खुलने का समय:</strong> सोमवार से रविवार (सुबह 8:00 बजे से रात 8:00 बजे तक)</p>
+                </div>
+
+                <p style="font-weight: 600; margin: 15px 0 8px 0;">हमारे सोशल मीडिया पेज:</p>
+                <div class="social-links">
+                    <a href="https://maps.app.goo.gl/dyLNiPvRPcDRV9hM8?g_st=ac" target="_blank" class="social-btn maps-btn">📍 Google Maps</a>
+                    <a href="https://www.facebook.com/share/1CjUFWEDYs/" target="_blank" class="social-btn fb-btn">📘 Facebook</a>
+                    <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="social-btn insta-btn">📸 Instagram</a>
+                </div>
+            </div>
+
+            <!-- ग्राहक समीक्षा (Testimonials) -->
+            <div class="card full-width">
+                <h2>⭐ ग्राहक समीक्षा (Customer Reviews)</h2>
+                <div class="reviews-container">
+                    <div class="review-card">
+                        <h4>राहुल कुमार</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"बहुत ही बेहतरीन सर्विस है भाई की! इंजन का काम करवाया था, गाड़ी बिल्कुल मक्खन चल रही है।"</p>
+                    </div>
+                    <div class="review-card">
+                        <h4>अमित झा</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"सरायरंजन रोड पर सबसे बेहतरीन बाइक रिपेयरिंग सेंटर। काम में पूरी ईमानदारी मिलती है।"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
+            <div class="card full-width" id="booking">
+                <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
+                <form onsubmit="bookAppointment(event)">
+                    <div class="form-group">
+                        <label for="name">पूरा नाम (Full Name): <span style="color:red;">*</span></label>
+                        <input type="text" id="name" required placeholder="अपना पूरा नाम दर्ज करें">
+                    </div>
                     
+                    <div class="form-group">
+                        <label for="phone">मोबाइल नंबर (Mobile Number): <span style="color:red;">*</span></label>
+                        <input type="tel" id="phone" required pattern="[0-9]{10}" title="कृपया 10 अंकों का सही मोबाइल नंबर दर्ज करें" placeholder="10 अंकों का मोबाइल नंबर (जैसे: 9876543210)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bike">बाइक का प्रकार / मॉडल (Bike Model): <span style="color:red;">*</span></label>
+                        <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar, Apache">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="problem">बाइक में क्या समस्या है? (Problem Description): <span style="color:red;">*</span></label>
+                        <textarea id="problem" required placeholder="अपनी बाइक की समस्या या सर्विस के बारे में विस्तार से लिखें..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">सर्विस का प्रकार चुनें:</label>
+                        <select id="service">
+                            <option value="General Servicing">जनरल सर्विसिंग</option>
+                            <option value="Engine Repair">इंजन रिपेयरिंग</option>
+                            <option value="Oil Change">ऑयल चेंज</option>
+                            <option value="Puncture/Tyre">पैंचर और टायर</option>
+                            <option value="Other Problem">अन्य समस्या</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">व्हाट्सएप पर बुकिंग भेजें</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- हमेशा तैरता हुआ व्हाट्सएप चैट बटन -->
+    <a href="https://wa.me/918130585587" target="_blank" class="floating-whatsapp" title="WhatsApp Chat">💬</a>
+
+    <footer>
+        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function bookAppointment(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const bike = document.getElementById('bike').value.trim();
+            const problem = document.getElementById('problem').value.trim();
+            const service = document.getElementById('service').value;
+
+            if(!name || !phone || !bike || !problem) {
+                alert('कृपया सभी अनिवार्य जानकारी भरें!');
+                return;
+            }
+
+            const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
+            window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
