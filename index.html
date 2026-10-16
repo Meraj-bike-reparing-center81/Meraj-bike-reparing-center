@@ -32,7 +32,7 @@
             display: inline-block;
             background-color: #ffcc00;
             color: #111;
-            padding: 5px 15px;
+            padding: 6px 18px;
             font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -60,7 +60,7 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
         .container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 25px auto;
             padding: 0 15px;
         }
@@ -74,7 +74,7 @@
         .card h2 {
             color: #1a252f;
             margin-bottom: 15px;
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             border-bottom: 2px solid #ffcc00;
             padding-bottom: 8px;
             font-weight: 700;
@@ -91,6 +91,33 @@
         ul li:last-child {
             border-bottom: none;
         }
+
+        /* सोशल मीडिया अचीवमेंट्स ग्रिड डिज़ाइन */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .stat-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #E4405F;
+        }
+        .stat-box h3 {
+            font-size: 1.4rem;
+            color: #1a252f;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        .stat-box p {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+        }
+
         /* सोशल मीडिया लिंक्स बटन डिज़ाइन */
         .social-links {
             display: flex;
@@ -101,17 +128,17 @@
         .social-btn {
             flex: 1;
             text-align: center;
-            padding: 10px 15px;
+            padding: 10px 12px;
             border-radius: 6px;
             color: white;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: opacity 0.3s;
         }
         .maps-btn { background-color: #4285F4; }
         .fb-btn { background-color: #1877F2; }
-        .insta-btn { background-color: #E4405F; }
+        .insta-btn { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
         .social-btn:hover { opacity: 0.9; }
 
         /* अपॉइंटमेंट फॉर्म डिज़ाइन */
@@ -173,12 +200,36 @@
 <body>
 
     <header>
-        <div class="logo-badge">Professional Two-Wheeler Workshop</div>
+        <div class="logo-badge">⭐ Trusted Bike Mechanic ⭐</div>
         <h1>Meraj <span>Bike Repairing Centre</span></h1>
         <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
     </header>
 
     <div class="container">
+        <!-- इंस्टाग्राम पॉपुलरिटी / इनसाइट्स कार्ड -->
+        <div class="card">
+            <h2>📸 सोशल मीडिया पॉपुलैरिटी (Instagram Insights)</h2>
+            <p style="font-size: 0.95rem; color: #555; margin-bottom: 10px;">हमारी रिपेयरिंग टिप्स और ट्रिक्स को लाखों लोग पसंद करते हैं:</p>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>9.6M+</h3>
+                    <p>Total Views[span_2](start_span)[span_2](end_span)</p>
+                </div>
+                <div class="stat-box">
+                    <h3>5.6M+</h3>
+                    <p>Unique Viewers[span_3](start_span)[span_3](end_span)</p>
+                </div>
+                <div class="stat-box">
+                    <h3>19K+</h3>
+                    <p>Likes & Engagement</p>
+                </div>
+                <div class="stat-box">
+                    <h3>2.4K+</h3>
+                    <p>New Followers</p>
+                </div>
+            </div>
+        </div>
+
         <!-- सेवाएँ कार्ड -->
         <div class="card">
             <h2>हमारी मुख्य सेवाएँ (Services):</h2>
@@ -196,7 +247,7 @@
             <p style="margin-bottom: 8px;"><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
             <p style="margin-bottom: 15px;"><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
             
-            <p style="font-weight: 600; margin-bottom: 8px;">हमसे यहाँ भी जुड़ें:</p>
+            <p style="font-weight: 600; margin-bottom: 8px;">हमारे सोशल मीडिया पेज:</p>
             <div class="social-links">
                 <a href="https://maps.app.goo.gl/dyLNiPvRPcDRV9hM8?g_st=ac" target="_blank" class="social-btn maps-btn">📍 Google Maps</a>
                 <a href="https://www.facebook.com/share/1CjUFWEDYs/" target="_blank" class="social-btn fb-btn">📘 Facebook</a>
@@ -204,7 +255,7 @@
             </div>
         </div>
 
-        <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म (अनिवार्य फील्ड्स के साथ) -->
+        <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
         <div class="card">
             <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
             <form onsubmit="bookAppointment(event)">
@@ -263,7 +314,6 @@
                 return;
             }
 
-            // व्हाट्सएप पर मैसेज भेजने का कोड
             const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
             window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
         }
