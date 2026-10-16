@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meraj Bike Repairing Centre</title>
-    <!-- गूगल फॉन्ट (Professional Font) जोड़ने के लिए -->
+    <!-- गूगल फॉन्ट (Professional Font) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,7 +17,7 @@
             background-color: #f4f7f6;
             color: #333;
         }
-        /* अत्यधिक आकर्षक और प्रोफेशनल हेडर डिज़ाइन */
+        /* प्रोफेशनल हेडर डिज़ाइन */
         header {
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
@@ -50,7 +50,7 @@
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         }
         header h1 span {
-            color: #ffcc00; /* 'Repairing Centre' हिस्से को सुनहरा रंग देने के लिए */
+            color: #ffcc00;
         }
         header p {
             font-size: 1.15rem;
@@ -91,6 +91,29 @@
         ul li:last-child {
             border-bottom: none;
         }
+        /* सोशल मीडिया लिंक्स बटन डिज़ाइन */
+        .social-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .social-btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px 15px;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+        .maps-btn { background-color: #4285F4; }
+        .fb-btn { background-color: #1877F2; }
+        .insta-btn { background-color: #E4405F; }
+        .social-btn:hover { opacity: 0.9; }
+
         /* अपॉइंटमेंट फॉर्म डिज़ाइन */
         .form-group {
             margin-bottom: 18px;
@@ -156,7 +179,7 @@
     </header>
 
     <div class="container">
-        <!-- सेवाएँ और संपर्क कार्ड -->
+        <!-- सेवाएँ कार्ड -->
         <div class="card">
             <h2>हमारी मुख्य सेवाएँ (Services):</h2>
             <ul>
@@ -167,13 +190,21 @@
             </ul>
         </div>
 
+        <!-- संपर्क और सोशल मीडिया कार्ड -->
         <div class="card">
-            <h2>दुकान का पता और संपर्क:</h2>
+            <h2>दुकान का पता और सोशल मीडिया:</h2>
             <p style="margin-bottom: 8px;"><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
-            <p><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
+            <p style="margin-bottom: 15px;"><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
+            
+            <p style="font-weight: 600; margin-bottom: 8px;">हमसे यहाँ भी जुड़ें:</p>
+            <div class="social-links">
+                <a href="https://maps.app.goo.gl/dyLNiPvRPcDRV9hM8?g_st=ac" target="_blank" class="social-btn maps-btn">📍 Google Maps</a>
+                <a href="https://www.facebook.com/share/1CjUFWEDYs/" target="_blank" class="social-btn fb-btn">📘 Facebook</a>
+                <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="social-btn insta-btn">📸 Instagram</a>
+            </div>
         </div>
 
-        <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
+        <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म (अनिवार्य फील्ड्स के साथ) -->
         <div class="card">
             <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
             <form onsubmit="bookAppointment(event)">
