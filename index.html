@@ -53,7 +53,7 @@
             color: #ffcc00;
         }
 
-        /* प्रोफेशनल हेडर और आपकी असली लोगो इमेज */
+        /* प्रोफेशनल हेडर और नया स्टाइलिश लोगो बैज */
         header {
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
@@ -61,20 +61,35 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 55px 20px;
             border-bottom: 5px solid #ffcc00;
         }
         
-        /* आपकी असली लोगो फोटो स्टाइल */
-        .header-logo-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
+        /* नया प्रीमियम गोल बैज लोगो (बिना किसी फालतू टेक्स्ट के) */
+        .custom-luxury-logo {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, #222, #000);
             border: 4px solid #ffcc00;
-            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
-            margin-bottom: 12px;
-            background-color: #111;
+            border-radius: 50%;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+        .custom-luxury-logo .logo-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+        .custom-luxury-logo .logo-text {
+            font-size: 0.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-top: 2px;
         }
 
         header h1 {
@@ -182,6 +197,27 @@
             font-size: 0.85rem;
             color: #666;
             font-weight: 600;
+        }
+
+        /* रेट कार्ड टेबल डिज़ाइन */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .price-table th, .price-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        .price-table th {
+            background-color: #f8f9fa;
+            color: #1a252f;
+            font-weight: 700;
+        }
+        .price-table td {
+            color: #555;
         }
 
         /* बाइक टिप्स कार्ड डिज़ाइन */
@@ -368,6 +404,7 @@
         <ul>
             <li><a href="#">होम</a></li>
             <li><a href="#services">सेवाएँ</a></li>
+            <li><a href="#pricing">रेट कार्ड</a></li>
             <li><a href="#tips">बाइक टिप्स</a></li>
             <li><a href="#stats">पॉपुलैरिटी</a></li>
             <li><a href="#contact">संपर्क</a></li>
@@ -375,10 +412,12 @@
         </ul>
     </nav>
 
-    <!-- हेडर विथ आपकी असली लोगो इमेज -->
+    <!-- हेडर विथ स्टाइलिश न्यू लोगो बैज -->
     <header>
-        <!-- यहाँ आपकी भेजी गई असली लोगो फोटो (logo.png) लगाई गई है -->
-        <img src="logo.png" alt="Meraj Bike Repairing Centre Logo" class="header-logo-img">
+        <div class="custom-luxury-logo">
+            <span class="logo-icon">🏍️</span>
+            <span class="logo-text">MERAJ</span>
+        </div>
         <h1>Meraj <span>Bike Repairing Centre</span></h1>
         <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
     </header>
@@ -400,11 +439,11 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <h3>9.6M+</h3>
-                        <p>Total Views[span_2](start_span)[span_2](end_span)</p>
+                        <p>Total Views[span_1](start_span)[span_1](end_span)</p>
                     </div>
                     <div class="stat-box">
                         <h3>5.6M+</h3>
-                        <p>Unique Viewers[span_3](start_span)[span_3](end_span)</p>
+                        <p>Unique Viewers[span_2](start_span)[span_2](end_span)</p>
                     </div>
                     <div class="stat-box">
                         <h3>19K+</h3>
@@ -446,17 +485,41 @@
                 </div>
             </div>
 
+            <!-- सर्विस रेट कार्ड (Price List) -->
+            <div class="card" id="pricing">
+                <h2>🛠️ सर्विस रेट कार्ड (Estimated Price)</h2>
+                <table class="price-table">
+                    <tr>
+                        <th>सर्विस का नाम</th>
+                        <th>अनुमानित शुल्क</th>
+                    </tr>
+                    <tr>
+                        <td>जनरल सर्विसिंग</td>
+                        <td>₹150 - ₹250</td>
+                    </tr>
+                    <tr>
+                        <td>इंजन ऑयल चेंज</td>
+                        <td>ऑयल मूल्य + नॉमिनल चार्ज</td>
+                    </tr>
+                    <tr>
+                        <td>इंजन रिपेयर / ट्यूनिंग</td>
+                        <td>काम के अनुसार</td>
+                    </tr>
+                    <tr>
+                        <td>पंचर और ट्यूबलेस रिपेयर</td>
+                        <td>₹40 - ₹80</td>
+                    </tr>
+                </table>
+            </div>
+
             <!-- एक्सपर्ट बाइक मेंटेनेंस टिप्स -->
-            <div class="card full-width" id="tips">
-                <h2>💡 बाइक मेंटेनेंस और जरूरी टिप्स (Expert Mechanic Advice)</h2>
-                <div class="tip-item">
-                    <strong>1. इंजन ऑयल कब बदलवाएं?</strong> सामान्य तौर पर हर बाइक चालक को अपनी बाइक का इंजन ऑयल हर <strong>2000 से 2500 किलोमीटर</strong> के बीच बदलवा लेना चाहिए, जिससे इंजन की उम्र लंबी होती है और गाड़ी स्मूथ चलती है।
+            <div class="card" id="tips">
+                <h2>💡 एक्सपर्ट बाइक मेंटेनेंस टिप्स</h2>
+                <div class="tip-item" style="margin-bottom: 8px;">
+                    <strong>इंजन ऑयल:</strong> हर <strong>2000 से 2500 किमी</strong> पर बदलवाएं ताकि इंजन स्मूथ चले।
                 </div>
-                <div class="tip-item">
-                    <strong>2. चेन की देखभाल क्यों है जरूरी?</strong> कभी भी बाइक की चेन को सूखा (Dry) नहीं चलाना चाहिए। अगर चेन सूखी चलेगी, तो उसका <strong>चेन-स्पॉकेट (Chain Sprocket) बहुत जल्दी खराब</strong> हो जाता है। चेन हमेशा अच्छी तरह लुब्रिकेटेड (तेल/ग्रीस युक्त) होनी चाहिए।
-                </div>
-                <div class="tip-item">
-                    <strong>3. चेन टाइटनिंग और ऑइलिंग:</strong> यदि चेन ढीली हो जाए तो उसे तुरंत किसी अच्छे मिस्त्री से टाइट करवाना चाहिए और सूखापन दिखने पर तुरंत उसमें सही समय पर तेल या लुब्रिकेंट डलवाना चाहिए।
+                <div class="tip-item" style="margin-bottom: 0;">
+                    <strong>चेन केयर:</strong> चेन कभी सूखी न चलाएं, वरना स्पॉकेट खराब होगा। समय पर तेल/ग्रीस डलवाएं।
                 </div>
             </div>
 
@@ -472,7 +535,7 @@
                     <div class="review-card">
                         <h4>अमित झा</h4>
                         <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"सरायरंजन रोड पर सबसे बेहतरीन बाइक रिपेयरिंग सेंटर। यहाँ बाइक की हर छोटी बात का बारीकी से ध्यान रखा जाता है।"</p>
+                        <p>"सरायरंजन रोड पर सबसे बेहतरीन बाइक रिपेयरिंग सेंटर। यहाँ हर काम पूरी ईमानदारी से होता है।"</p>
                     </div>
                 </div>
             </div>
@@ -520,35 +583,4 @@
         </div>
     </div>
 
-    <!-- हमेशा तैरता हुआ व्हाट्सएप चैट बटन -->
-    <a href="https://wa.me/918130585587" target="_blank" class="floating-whatsapp" title="WhatsApp Chat">💬</a>
-
-    <footer>
-        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function bookAppointment(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const bike = document.getElementById('bike').value.trim();
-            const problem = document.getElementById('problem').value.trim();
-            const service = document.getElementById('service').value;
-
-            if(!name || !phone || !bike || !problem) {
-                alert('कृपया सभी अनिवार्य जानकारी भरें!');
-                return;
-            }
-
-            // सफलता का पॉप-अप मैसेज
-            alert('आपका अपॉइंटमेंट फॉर्म सफलतापूर्वक भर गया है! अब व्हाट्सएप पर भेजा जा रहा है।');
-
-            const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
-            window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
-        }
-    </script>
-
-</body>
-</html>
+    
