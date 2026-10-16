@@ -40,12 +40,12 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 15px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             transition: color 0.3s;
         }
@@ -53,7 +53,7 @@
             color: #ffcc00;
         }
 
-        /* प्रोफेशनल हेडर और प्रीमियम बिल्ट-इन लोगो */
+        /* प्रोफेशनल हेडर और आपकी असली लोगो इमेज */
         header {
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
@@ -65,31 +65,16 @@
             border-bottom: 5px solid #ffcc00;
         }
         
-        /* शानदार कस्टम गोल्डन लोगो डिज़ाइन (बिना फोटो अपलोड किए) */
-        .custom-luxury-logo {
-            width: 130px;
-            height: 130px;
-            background: linear-gradient(135deg, #222, #000);
-            border: 4px solid #ffcc00;
+        /* आपकी असली लोगो फोटो स्टाइल */
+        .header-logo-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
             border-radius: 50%;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
-            margin-bottom: 15px;
-            color: #ffcc00;
-        }
-        .custom-luxury-logo .logo-icon {
-            font-size: 2.2rem;
-            line-height: 1;
-        }
-        .custom-luxury-logo .logo-text {
-            font-size: 0.85rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-top: 2px;
+            border: 4px solid #ffcc00;
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
+            margin-bottom: 12px;
+            background-color: #111;
         }
 
         header h1 {
@@ -156,6 +141,23 @@
             border-bottom: none;
         }
 
+        /* स्पेशल ऑफर बैनर */
+        .offer-banner {
+            background: linear-gradient(135deg, #ff9900, #ffcc00);
+            color: #111;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+        }
+        .offer-banner h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
         /* सोशल मीडिया अचीवमेंट्स ग्रिड */
         .stats-grid {
             display: grid;
@@ -182,15 +184,30 @@
             font-weight: 600;
         }
 
+        /* बाइक टिप्स कार्ड डिज़ाइन */
+        .tip-item {
+            background: #fff8e1;
+            border-left: 4px solid #f39c12;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+        .tip-item strong {
+            color: #d35400;
+        }
+
         /* वर्किंग ऑवर्स बॉक्स */
         .timing-box {
-            background: #fff8e1;
-            border-left: 4px solid #ffcc00;
+            background: #e8f8f5;
+            border-left: 4px solid #27ae60;
             padding: 12px 15px;
             border-radius: 6px;
             margin-top: 15px;
             font-size: 0.95rem;
-            color: #555;
+            color: #2c3e50;
         }
 
         /* ग्राहक समीक्षा (Testimonials) */
@@ -351,24 +368,29 @@
         <ul>
             <li><a href="#">होम</a></li>
             <li><a href="#services">सेवाएँ</a></li>
+            <li><a href="#tips">बाइक टिप्स</a></li>
             <li><a href="#stats">पॉपुलैरिटी</a></li>
             <li><a href="#contact">संपर्क</a></li>
             <li><a href="#booking">अपॉइंटमेंट</a></li>
         </ul>
     </nav>
 
-    <!-- हेडर विथ प्रीमियम बिल्ट-इन लोगो -->
+    <!-- हेडर विथ आपकी असली लोगो इमेज -->
     <header>
-        <!-- शानदार कस्टम लोगो -->
-        <div class="custom-luxury-logo">
-            <span class="logo-icon">🏍️</span>
-            <span class="logo-text">MERAJ</span>
-        </div>
+        <!-- यहाँ आपकी भेजी गई असली लोगो फोटो (logo.png) लगाई गई है -->
+        <img src="logo.png" alt="Meraj Bike Repairing Centre Logo" class="header-logo-img">
         <h1>Meraj <span>Bike Repairing Centre</span></h1>
         <p>आपकी बाइक के लिए भरोसेमंद, आधुनिक और बेहतरीन सर्विस</p>
     </header>
 
     <div class="container">
+
+        <!-- स्पेशल ऑफर बैनर -->
+        <div class="offer-banner">
+            <h3>🎉 स्पेशल ऑफर / छूट 🎉</h3>
+            <p>पहली बार जनरल सर्विसिंग करवाने पर लेबर चार्ज पर भारी छूट! आज ही अपना अपॉइंटमेंट बुक करें।</p>
+        </div>
+
         <div class="grid-layout">
 
             <!-- इंस्टाग्राम पॉपुलरिटी / इनसाइट्स कार्ड -->
@@ -378,11 +400,11 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <h3>9.6M+</h3>
-                        <p>Total Views</p>
+                        <p>Total Views[span_2](start_span)[span_2](end_span)</p>
                     </div>
                     <div class="stat-box">
                         <h3>5.6M+</h3>
-                        <p>Unique Viewers</p>
+                        <p>Unique Viewers[span_3](start_span)[span_3](end_span)</p>
                     </div>
                     <div class="stat-box">
                         <h3>19K+</h3>
@@ -418,5 +440,115 @@
 
                 <p style="font-weight: 600; margin: 15px 0 8px 0;">हमारे सोशल मीडिया पेज:</p>
                 <div class="social-links">
-                    <a href="
-                        
+                    <a href="https://maps.app.goo.gl/dyLNiPvRPcDRV9hM8?g_st=ac" target="_blank" class="social-btn maps-btn">📍 Google Maps</a>
+                    <a href="https://www.facebook.com/share/1CjUFWEDYs/" target="_blank" class="social-btn fb-btn">📘 Facebook</a>
+                    <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="social-btn insta-btn">📸 Instagram</a>
+                </div>
+            </div>
+
+            <!-- एक्सपर्ट बाइक मेंटेनेंस टिप्स -->
+            <div class="card full-width" id="tips">
+                <h2>💡 बाइक मेंटेनेंस और जरूरी टिप्स (Expert Mechanic Advice)</h2>
+                <div class="tip-item">
+                    <strong>1. इंजन ऑयल कब बदलवाएं?</strong> सामान्य तौर पर हर बाइक चालक को अपनी बाइक का इंजन ऑयल हर <strong>2000 से 2500 किलोमीटर</strong> के बीच बदलवा लेना चाहिए, जिससे इंजन की उम्र लंबी होती है और गाड़ी स्मूथ चलती है।
+                </div>
+                <div class="tip-item">
+                    <strong>2. चेन की देखभाल क्यों है जरूरी?</strong> कभी भी बाइक की चेन को सूखा (Dry) नहीं चलाना चाहिए। अगर चेन सूखी चलेगी, तो उसका <strong>चेन-स्पॉकेट (Chain Sprocket) बहुत जल्दी खराब</strong> हो जाता है। चेन हमेशा अच्छी तरह लुब्रिकेटेड (तेल/ग्रीस युक्त) होनी चाहिए।
+                </div>
+                <div class="tip-item">
+                    <strong>3. चेन टाइटनिंग और ऑइलिंग:</strong> यदि चेन ढीली हो जाए तो उसे तुरंत किसी अच्छे मिस्त्री से टाइट करवाना चाहिए और सूखापन दिखने पर तुरंत उसमें सही समय पर तेल या लुब्रिकेंट डलवाना चाहिए।
+                </div>
+            </div>
+
+            <!-- ग्राहक समीक्षा (Testimonials) -->
+            <div class="card full-width">
+                <h2>⭐ ग्राहक समीक्षा (Customer Reviews)</h2>
+                <div class="reviews-container">
+                    <div class="review-card">
+                        <h4>राहुल कुमार</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"बहुत ही बेहतरीन सर्विस है भाई की! इंजन का काम करवाया था, गाड़ी बिल्कुल मक्खन चल रही है।"</p>
+                    </div>
+                    <div class="review-card">
+                        <h4>अमित झा</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"सरायरंजन रोड पर सबसे बेहतरीन बाइक रिपेयरिंग सेंटर। यहाँ बाइक की हर छोटी बात का बारीकी से ध्यान रखा जाता है।"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ऑनलाइन अपॉइंटमेंट बुकिंग फॉर्म -->
+            <div class="card full-width" id="booking">
+                <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
+                <form onsubmit="bookAppointment(event)">
+                    <div class="form-group">
+                        <label for="name">पूरा नाम (Full Name): <span style="color:red;">*</span></label>
+                        <input type="text" id="name" required placeholder="अपना पूरा नाम दर्ज करें">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">मोबाइल नंबर (Mobile Number): <span style="color:red;">*</span></label>
+                        <input type="tel" id="phone" required pattern="[0-9]{10}" title="कृपया 10 अंकों का सही मोबाइल नंबर दर्ज करें" placeholder="10 अंकों का मोबाइल नंबर (जैसे: 9876543210)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bike">बाइक का प्रकार / मॉडल (Bike Model): <span style="color:red;">*</span></label>
+                        <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar, Apache">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="problem">बाइक में क्या समस्या है? (Problem Description): <span style="color:red;">*</span></label>
+                        <textarea id="problem" required placeholder="अपनी बाइक की समस्या या सर्विस के बारे में विस्तार से लिखें..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">सर्विस का प्रकार चुनें:</label>
+                        <select id="service">
+                            <option value="General Servicing">जनरल सर्विसिंग</option>
+                            <option value="Engine Repair">इंजन रिपेयरिंग</option>
+                            <option value="Oil Change">ऑयल चेंज</option>
+                            <option value="Puncture/Tyre">पैंचर और टायर</option>
+                            <option value="Chain Lubrication">चेन ऑयलिंग / सर्विस</option>
+                            <option value="Other Problem">अन्य समस्या</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">व्हाट्सएप पर बुकिंग भेजें</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- हमेशा तैरता हुआ व्हाट्सएप चैट बटन -->
+    <a href="https://wa.me/918130585587" target="_blank" class="floating-whatsapp" title="WhatsApp Chat">💬</a>
+
+    <footer>
+        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function bookAppointment(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const bike = document.getElementById('bike').value.trim();
+            const problem = document.getElementById('problem').value.trim();
+            const service = document.getElementById('service').value;
+
+            if(!name || !phone || !bike || !problem) {
+                alert('कृपया सभी अनिवार्य जानकारी भरें!');
+                return;
+            }
+
+            // सफलता का पॉप-अप मैसेज
+            alert('आपका अपॉइंटमेंट फॉर्म सफलतापूर्वक भर गया है! अब व्हाट्सएप पर भेजा जा रहा है।');
+
+            const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ चुनी गई सर्विस: ${service}%0A📝 समस्या: ${problem}`;
+            window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
