@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meraj Bike Repairing Centre</title>
-    <!-- गूगल फॉन्ट (Professional Font) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -18,21 +17,18 @@
             background-color: #f4f7f6;
             color: #333;
         }
-
-        /* टॉप नेविगेशन बार */
         nav {
             background-color: #1a252f;
             color: white;
-            padding: 12px 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
-        nav .nav-brand {
+        nav .brand {
             font-weight: 700;
             font-size: 1.1rem;
             color: #ffcc00;
@@ -40,283 +36,222 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 15px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            transition: color 0.3s;
         }
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-
-        /* हेडर और लोगो */
         header {
-            position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 55px 20px;
+            padding: 50px 20px;
             border-bottom: 5px solid #ffcc00;
         }
-        
-        .custom-luxury-logo {
-            width: 130px;
-            height: 130px;
-            background: linear-gradient(135deg, #222, #000);
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: #000;
             border: 4px solid #ffcc00;
             border-radius: 50%;
             display: inline-flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
             margin-bottom: 15px;
             color: #ffcc00;
         }
-        .custom-luxury-logo .logo-icon {
-            font-size: 2.2rem;
-            line-height: 1;
-        }
-        .custom-luxury-logo .logo-text {
-            font-size: 0.8rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-top: 2px;
-        }
-
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 900;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ffffff;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         }
         header h1 span {
             color: #ffcc00;
         }
         header p {
-            font-size: 1.1rem;
-            font-weight: 400;
+            font-size: 1rem;
             color: #f1f1f1;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
-
         .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
         }
-        
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .full-width {
-            grid-column: span 2;
-        }
-
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             margin-bottom: 20px;
         }
         .card h2 {
             color: #1a252f;
-            margin-bottom: 15px;
-            font-size: 1.35rem;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
             border-bottom: 2px solid #ffcc00;
-            padding-bottom: 8px;
-            font-weight: 700;
+            padding-bottom: 6px;
         }
         ul {
-            list-style-type: none;
+            list-style: none;
         }
         ul li {
-            padding: 10px 0;
-            font-size: 1.05rem;
+            padding: 8px 0;
             border-bottom: 1px dashed #eee;
-            color: #444;
-        }
-        ul li:last-child {
-            border-bottom: none;
-        }
-
-        /* ऑफर बैनर */
-        .offer-banner {
-            background: linear-gradient(135deg, #ff9900, #ffcc00);
-            color: #111;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
-        }
-        .offer-banner h3 {
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        /* सोशल मीडिया ग्रिड */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .stat-box {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            border-left: 4px solid #E4405F;
-        }
-        .stat-box h3 {
-            font-size: 1.3rem;
-            color: #1a252f;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-        .stat-box p {
-            font-size: 0.85rem;
-            color: #666;
-            font-weight: 600;
-        }
-
-        /* रेट कार्ड टेबल */
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        .price-table th, .price-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-            font-size: 0.95rem;
-        }
-        .price-table th {
-            background-color: #f8f9fa;
-            color: #1a252f;
-            font-weight: 700;
-        }
-        .price-table td {
-            color: #555;
-        }
-
-        .tip-item {
-            background: #fff8e1;
-            border-left: 4px solid #f39c12;
-            padding: 12px 15px;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: #444;
-            line-height: 1.5;
-        }
-        .tip-item strong {
-            color: #d35400;
-        }
-
-        .timing-box {
-            background: #e8f8f5;
-            border-left: 4px solid #27ae60;
-            padding: 12px 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            font-size: 0.95rem;
-            color: #2c3e50;
-        }
-
-        .reviews-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        .review-card {
-            background: #fdfdfd;
-            border: 1px solid #eee;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .review-card h4 {
             font-size: 1rem;
-            color: #333;
-            margin-bottom: 3px;
         }
-        .review-card .stars {
-            color: #f39c12;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-        .review-card p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        .social-btn {
-            flex: 1;
-            text-align: center;
-            padding: 10px 12px;
-            border-radius: 6px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: opacity 0.3s;
-        }
-        .maps-btn { background-color: #4285F4; }
-        .fb-btn { background-color: #1877F2; }
-        .insta-btn { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .social-btn:hover { opacity: 0.9; }
-
-        /* फॉर्म स्टाइल्स */
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 600;
-            color: #333;
             font-size: 0.95rem;
         }
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ccd1d1;
-            border-radius: 6px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 1rem;
-            background-color: #fafafa;
-            transition: border 0.3s;
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: #ffcc00;
-            outline: none;
-            background-color: #fff;
+        .btn-submit {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .form-group textarea {
-            resize:
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        footer {
+            text-align: center;
+            background-color: #1a252f;
+            color: white;
+            padding: 15px;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand">⚙️ Meraj Bike Centre</div>
+        <ul>
+            <li><a href="#services">सेवाएँ</a></li>
+            <li><a href="#booking">बुकिंग</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <span style="font-size: 2rem;">🏍️</span>
+            <span style="font-size: 0.7rem; font-weight: 900; letter-spacing: 1px;">MERAJ</span>
+        </div>
+        <h1>Meraj <span>Bike Repairing Centre</span></h1>
+        <p>आपकी बाइक के लिए भरोसेमंद और बेहतरीन सर्विस</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- सेवाएँ -->
+        <div class="card" id="services">
+            <h2>हमारी मुख्य सेवाएँ:</h2>
+            <ul>
+                <li>🔧 बाइक जनरल सर्विसिंग (General Servicing)</li>
+                <li>⚙️ इंजन रिपेयरिंग और ट्यूनिंग</li>
+                <li>🛢️ प्रीमियम ऑयल चेंज (Oil Change)</li>
+                <li>🛞 पैंचर और ट्यूबलेस टायर रिपेयर</li>
+            </ul>
+        </div>
+
+        <!-- दुकान का पता -->
+        <div class="card">
+            <h2>दुकान का पता और समय:</h2>
+            <p><strong>📍 पता:</strong> सरायरंजन रोड, परोरिया झरुल्ला स्थान</p>
+            <p><strong>📞 मोबाइल नंबर:</strong> 8130585587</p>
+            <p style="margin-top: 8px;"><strong>⏰ समय:</strong> सुबह 8:00 से रात 8:00 बजे तक (सोमवार - रविवार)</p>
+        </div>
+
+        <!-- अपॉइंटमेंट बुकिंग फॉर्म -->
+        <div class="card" id="booking">
+            <h2>ऑनलाइन अपॉइंटमेंट बुक करें</h2>
+            <form onsubmit="bookAppointment(event)">
+                <div class="form-group">
+                    <label>पूरा नाम:</label>
+                    <input type="text" id="name" required placeholder="अपना नाम दर्ज करें">
+                </div>
                 
+                <div class="form-group">
+                    <label>मोबाइल नंबर:</label>
+                    <input type="tel" id="phone" required placeholder="10 अंकों का मोबाइल नंबर">
+                </div>
+
+                <div class="form-group">
+                    <label>बाइक का मॉडल:</label>
+                    <input type="text" id="bike" required placeholder="जैसे: Splendor, Pulsar">
+                </div>
+
+                <div class="form-group">
+                    <label>समस्या या सर्विस:</label>
+                    <textarea id="problem" required placeholder="समस्या के बारे में लिखें..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">व्हाट्सएप पर बुकिंग भेजें</button>
+            </form>
+        </div>
+
+    </div>
+
+    <a href="https://wa.me/918130585587" target="_blank" class="whatsapp-float">💬</a>
+
+    <footer>
+        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function bookAppointment(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const bike = document.getElementById('bike').value.trim();
+            const problem = document.getElementById('problem').value.trim();
+
+            if(!name || !phone || !bike || !problem) {
+                alert('कृपया सभी जानकारी भरें!');
+                return;
+            }
+
+            const message = `New Bike Service Appointment:%0A👤 नाम: ${name}%0A📱 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A📝 समस्या: ${problem}`;
+            window.open(`https://wa.me/918130585587?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
